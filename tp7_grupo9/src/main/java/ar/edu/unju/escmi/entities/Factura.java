@@ -33,7 +33,7 @@ public class Factura {
     private boolean estado;
 
     @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL,
-               fetch = FetchType.LAZY)
+               fetch = FetchType.EAGER)
     private List<DetalleFactura> detalles = new ArrayList<>();
 
     public Factura() {
